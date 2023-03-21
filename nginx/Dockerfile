@@ -1,5 +1,5 @@
 FROM alpine:latest
-
+LABEL maintainer="nickvab@gmail.com"
 RUN apk update \
     && apk upgrade \
     && apk add --no-cache nginx \
