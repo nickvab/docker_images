@@ -46,7 +46,7 @@ jobs:
           SLACK_CHANNEL: nickvab_git
           SLACK_COLOR: ${{ job.status }}
           SLACK_TITLE: Message
-          SLACK_MESSAGE: 'Package ${{ inputs.imageToBuild }} was build with SUCCESS result'
+          SLACK_MESSAGE: 'Package ${{ github.repository }}:${{ inputs.imageToBuild }} was build with SUCCESS result'
           SLACK_USERNAME: ${{ github.repository }}
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
 
@@ -57,6 +57,6 @@ jobs:
           SLACK_CHANNEL: nickvab_git
           SLACK_COLOR: ${{ job.status }}
           SLACK_TITLE: Message
-          SLACK_MESSAGE: 'Package ${{ inputs.imageToBuild }} was build with FAIL result'
+          SLACK_MESSAGE: 'Package ${{ github.repository }}:${{ inputs.imageToBuild }} was build with FAIL result'
           SLACK_USERNAME: ${{ github.repository }}
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
