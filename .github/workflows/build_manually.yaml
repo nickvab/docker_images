@@ -10,6 +10,7 @@ on:
         options:
         - busy-box
         - nginx
+        - stress
       tagImage:
         description: 'please add tag'
         required: true
